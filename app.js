@@ -150,7 +150,7 @@ function updateThemeIcon() {
 
 async function fetchNews() {
     try {
-        const res = await fetch('news.json');
+        const res = await fetch(`news.json?v=${new Date().getTime()}`);
         newsData = await res.json();
         if(!newsData || newsData.length === 0) throw new Error();
     } catch (e) {
