@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "source": "PTI/Official",
+        "date": "Apr 21, 2026",
+        "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
+        "en": {
+            "title": "Sector 6: Land Clearance for 11,000 Homes Begins",
+            "desc": "The DRP/SRA teams have started clearing 35-acre Railway land in Matunga for Phase 1 construction.",
+            "full": "Authorities have officially commenced the clearance of Indian Railways land in Matunga. This area, designated as Sector 6, will host 11,000 rehabilitation units. Residents in clustered areas are being moved to transit camps."
+        },
+        "hi": {
+            "title": "सेक्टर 6: 11,000 घरों के लिए भूमि निकासी शुरू",
+            "desc": "DRP/SRA टीमों ने प्रथम चरण के निर्माण के लिए माटुंगा में 35 एकड़ रेलवे भूमि की सफाई शुरू कर दी है।",
+            "full": "अधिकारियों ने आधिकारिक तौर पर माटुंगा में भारतीय रेलवे की भूमि की निकासी शुरू कर दी है। सेक्टर 6 के रूप में नामित इस क्षेत्र में 11,000 पुनर्वास इकाइयाँ होंगी।"
+        }
+    },
+    {
+        "id": 2,
+        "source": "HT/Verified",
+        "date": "Apr 18, 2026",
+        "img": "https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=800",
+        "en": {
+            "title": "HC Dismisses Petition to Exclude Koliwada Land",
+            "desc": "Bombay High Court clears hurdle for unified project expansion across Dharavi boundaries.",
+            "full": "The Bombay High Court rejected a petition by the Dharavi Koli Jamat Trust that sought to exclude their land from the redevelopment project."
+        },
+        "hi": {
+            "title": "हाई कोर्ट ने कोलीवाड़ा भूमि को बाहर करने की याचिका खारिज की",
+            "desc": "बॉम्बे हाई कोर्ट ने धारावी की सीमाओं के पार एकीकृत परियोजना विस्तार के लिए बाधा दूर कर दी है।",
+            "full": "बॉम्बे हाई कोर्ट ने धारावी कोली जमात ट्रस्ट की उस याचिका को खारिज कर दिया जिसमें उनकी भूमि को पुनर्विकास परियोजना से बाहर करने की मांग की गई थी।"
+        }
+    }
+]

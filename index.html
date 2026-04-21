@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharavi Re-development Latest Updates</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Dharavi Re-development</div>
+            <div class="header-actions" style="display: flex; gap: 0.75rem;">
+                <button id="theme-btn" class="btn-icon" onclick="toggleTheme()" style="background: var(--bg-main); border-radius: 50%; border: 1px solid var(--border); width: 40px; height: 40px; cursor: pointer; color: var(--text-main);">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-btn" class="lang-toggle" onclick="toggleLanguage()" style="background: var(--primary); color: white; border: none; padding: 0.5rem 1.25rem; border-radius: 50px; font-weight: 700; cursor: pointer;">हिन्दी</button>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="news" id="tab-news">Latest News</button>
+            <button class="tab-btn" data-tab="sectors" id="tab-sectors">Sectors Status</button>
+            <button class="tab-btn" data-tab="info" id="tab-info">Eligibility Guide</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- news Tab -->
+            <section id="news" class="tab-panel active">
+                <div id="news-container"></div>
+            </section>
+
+            <!-- Sectors Tab -->
+            <section id="sectors" class="tab-panel">
+                <div id="sector-grid" class="sector-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"></div>
+            </section>
+
+            <!-- Info Tab -->
+            <section id="info" class="tab-panel">
+                <div class="grid-2">
+                    <div class="sub-card" id="elig-card"></div>
+                    <div class="sub-card" id="docs-card">
+                        <h3 id="docs-title" style="margin-bottom: 1.5rem; font-size: 1.4rem;">Required Documents</h3>
+                        <div id="docs-content" style="display: grid; grid-template-columns: 1fr; gap: 0.75rem;"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Article Modal -->
+    <div id="news-modal" class="modal" style="display: none; position: fixed; inset: 0; z-index: 2000; align-items: center; justify-content: center; padding: 1.5rem;">
+        <div class="modal-content" style="background: var(--bg-white); width: 100%; max-width: 700px; max-height: 85vh; overflow-y: auto; position: relative;">
+            <button onclick="closeModal()" style="position: absolute; top: 1.5rem; right: 1.5rem; border: none; background: none; font-size: 2rem; cursor: pointer; color: var(--text-dim);">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
