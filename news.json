@@ -1,5 +1,21 @@
 [
     {
+        "id": 13,
+        "source": "DRPPL/DailyLog",
+        "date": "May 15, 2026",
+        "img": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
+        "en": {
+            "title": "Project Status Report: May 15, 2026",
+            "desc": "Automated daily audit of Sector 6 construction progress and S1-S5 survey benchmarks.",
+            "full": "As of May 15, 2026 10:00 AM IST, DRPPL structural teams report consistent progress at the Matunga railway land site. Survey teams in Sector 1 have completed an additional 4 sub-blocks of biometric data collection. All systems are operational."
+        },
+        "hi": {
+            "title": "परियोजना स्थिति रिपोर्ट: May 15, 2026",
+            "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
+            "full": "May 15, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
+        }
+    },
+    {
         "id": 12,
         "source": "DRPPL/DailyLog",
         "date": "May 14, 2026",
@@ -141,22 +157,6 @@
             "title": "कानूनी लैंडमार्क: हाई कोर्ट ने एकीकृत धारावी योजना सीमा को बरकरार रखा",
             "desc": "अदालत ने बहिष्कार याचिकाओं को खारिज कर दिया, जिससे समग्र बुनियादी ढांचे का रास्ता साफ हो गया।",
             "full": "बॉम्बे हाई कोर्ट की एक खंडपीठ ने ऐतिहासिक भूमि-मालिक ट्रस्टों की याचिकाओं की एक श्रृंखला को खारिज करके धारावी पुनर्विकास परियोजना के लिए अंतिम कानूनी बाधा को दूर कर दिया है। <br><br>अदालत ने कहा कि खंडित विकास एक आधुनिक शहरी पारिस्थितिकी तंत्र बनाने के लक्ष्य को घातक रूप से कमजोर करेगा। एकीकृत सीमा को बरकरार रखकर, परियोजना अब सीवेज, बिना रुके पानी की आपूर्ति और व्यापक पारगमन गलियारों के लिए एक एकल, एकीकृत नेटवर्क के साथ आगे बढ़ सकती है।"
-        }
-    },
-    {
-        "id": 3,
-        "source": "DRPPL News",
-        "date": "Apr 15, 2026",
-        "img": "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=800",
-        "en": {
-            "title": "Digital Survey Update: Biometric Data Analysis Reaches 85%",
-            "desc": "Over 85,000 households now mapped in the world's most precise GIS-based resident registry.",
-            "full": "The Special Purpose Vehicle (DRPPL) has announced that its on-ground survey teams have successfully mapped and verified 85% of the households in Sectors 1 through 5. This survey utilizes advanced GIS (Geographic Information System) mapping combined with biometric verification to ensure that every eligible resident is accounted for in the master registry. <br><br>Each structure is assigned a unique Digital ID, which is linked to the resident's Aadhaar and historical documents. This high-precision data is being stored in a secure, decentralized vault to prevent data tampering. To assist residents who were unavailable during the first three rounds, DRPPL has established 'Help Desks' at five strategic locations across Dharavi. Residents are encouraged to visit these centers with their original documents to complete their 'Incentive Allotment' status before the registry closes next month."
-        },
-        "hi": {
-            "title": "डिजिटल सर्वे अपडेट: बायोमेट्रिक डेटा विश्लेषण 85% तक पहुंचा",
-            "desc": "विश्व के सबसे सटीक GIS-आधारित निवासी रजिस्ट्री में अब 85,000 से अधिक घर मैप किए गए हैं।",
-            "full": "DRPPL ने घोषणा की है कि उसकी ऑन-ग्राउंड सर्वेक्षण टीमों ने सेक्टर 1 से 5 तक के 85% घरों का सफलतापूर्वक मानचित्रण और सत्यापन किया है। यह सर्वेक्षण प्रत्येक पात्र निवासी का मास्टर रजिस्ट्री में हिसाब सुनिश्चित करने के लिए उन्नत GIS मानचित्रण और बायोमेट्रिक सत्यापन का उपयोग करता है। <br><br>प्रत्येक संरचना को एक अद्वितीय डिजिटल आईडी दी गई है, जो निवासी के आधार और ऐतिहासिक दस्तावेजों से जुड़ी है। निवासियों की सहायता के लिए जो पहले तीन दौर के दौरान अनुपलब्ध थे, DRPPL ने धारावी में पांच रणनीतिक स्थानों पर 'हेल्प डेस्क' स्थापित किए हैं।"
         }
     }
 ]
