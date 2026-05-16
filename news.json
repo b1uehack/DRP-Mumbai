@@ -1,5 +1,21 @@
 [
     {
+        "id": 14,
+        "source": "DRPPL/DailyLog",
+        "date": "May 16, 2026",
+        "img": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
+        "en": {
+            "title": "Project Status Report: May 16, 2026",
+            "desc": "Automated daily audit of Sector 6 construction progress and S1-S5 survey benchmarks.",
+            "full": "As of May 16, 2026 10:00 AM IST, DRPPL structural teams report consistent progress at the Matunga railway land site. Survey teams in Sector 1 have completed an additional 4 sub-blocks of biometric data collection. All systems are operational."
+        },
+        "hi": {
+            "title": "परियोजना स्थिति रिपोर्ट: May 16, 2026",
+            "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
+            "full": "May 16, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
+        }
+    },
+    {
         "id": 13,
         "source": "DRPPL/DailyLog",
         "date": "May 15, 2026",
@@ -141,22 +157,6 @@
             "title": "सेक्टर 6 फाउंडेशन: 11,000 घरों के लिए संरचनात्मक चरण",
             "desc": "माटुंगा रेलवे भूमि स्थल अपने सबसे महत्वपूर्ण इंजीनियरिंग चरण में प्रवेश कर गया है।",
             "full": "धारावी पुनर्विकास परियोजना (DRP) के इंजीनियरों ने सेक्टर 6 में इमारतों के पहले क्लस्टर के लिए बड़े पैमाने पर पाइलिंग और बुनियादी काम सफलतापूर्वक पूरा कर लिया है। यह क्षेत्र, माटुंगा में 35 एकड़ रेलवे भूमि पर स्थित है। <br><br>पहले चरण में 11 आवासीय ब्लॉक शामिल हैं, जिनमें से प्रत्येक 24 मंजिला होगा। इस परियोजना का लक्ष्य निर्माण शोर और प्रदूषण को कम करना है। इन इकाइयों को 350 वर्ग फुट के कार्पेट एरिया वाले घरों के रूप में डिजाइन किया गया है, जिसमें हाई-स्पीड लिफ्ट और विशेष अग्नि सुरक्षा प्रणालियां शामिल हैं। अधिकारियों ने कहा कि पहले 1,000 परिवारों को 2027 के मध्य तक अपनी चाबियां मिलने की उम्मीद है।"
-        }
-    },
-    {
-        "id": 2,
-        "source": "Bombay HC",
-        "date": "Apr 18, 2026",
-        "img": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800",
-        "en": {
-            "title": "Legal Landmark: HC Upholds Unified Dharavi Planning Boundary",
-            "desc": "Court dismisses exclusion petitions, clearing path for holistic infrastructure delivery.",
-            "full": "A division bench of the Bombay High Court has cleared the final legal hurdle for the Dharavi Redevelopment Project by dismissing a series of petitions from historical land-owner trusts. The petitioners had requested the court to exclude specific pockets, including parts of Koliwada and specific industrial estates, from the project's 'Notified Area' status. <br><br>The Court observed that fragmented development would fatally undermine the goal of creating a modern urban ecosystem. By upholding the unified boundary, the project can now proceed with a single, integrated network for sewage, non-stop water supply, and broad transit corridors that would have been impossible if individual plots were carved out. Legal experts suggest this ruling provides the necessary 'sovereign clarity' for international financiers and development partners to commit long-term resources to the project."
-        },
-        "hi": {
-            "title": "कानूनी लैंडमार्क: हाई कोर्ट ने एकीकृत धारावी योजना सीमा को बरकरार रखा",
-            "desc": "अदालत ने बहिष्कार याचिकाओं को खारिज कर दिया, जिससे समग्र बुनियादी ढांचे का रास्ता साफ हो गया।",
-            "full": "बॉम्बे हाई कोर्ट की एक खंडपीठ ने ऐतिहासिक भूमि-मालिक ट्रस्टों की याचिकाओं की एक श्रृंखला को खारिज करके धारावी पुनर्विकास परियोजना के लिए अंतिम कानूनी बाधा को दूर कर दिया है। <br><br>अदालत ने कहा कि खंडित विकास एक आधुनिक शहरी पारिस्थितिकी तंत्र बनाने के लक्ष्य को घातक रूप से कमजोर करेगा। एकीकृत सीमा को बरकरार रखकर, परियोजना अब सीवेज, बिना रुके पानी की आपूर्ति और व्यापक पारगमन गलियारों के लिए एक एकल, एकीकृत नेटवर्क के साथ आगे बढ़ सकती है।"
         }
     }
 ]
