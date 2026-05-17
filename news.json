@@ -1,5 +1,21 @@
 [
     {
+        "id": 15,
+        "source": "DRPPL/DailyLog",
+        "date": "May 17, 2026",
+        "img": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
+        "en": {
+            "title": "Project Status Report: May 17, 2026",
+            "desc": "Automated daily audit of Sector 6 construction progress and S1-S5 survey benchmarks.",
+            "full": "As of May 17, 2026 10:00 AM IST, DRPPL structural teams report consistent progress at the Matunga railway land site. Survey teams in Sector 1 have completed an additional 4 sub-blocks of biometric data collection. All systems are operational."
+        },
+        "hi": {
+            "title": "परियोजना स्थिति रिपोर्ट: May 17, 2026",
+            "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
+            "full": "May 17, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
+        }
+    },
+    {
         "id": 14,
         "source": "DRPPL/DailyLog",
         "date": "May 16, 2026",
@@ -141,22 +157,6 @@
             "title": "परियोजना स्थिति रिपोर्ट: May 08, 2026",
             "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
             "full": "May 08, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
-        }
-    },
-    {
-        "id": 1,
-        "source": "Official/PTI",
-        "date": "Apr 21, 2026",
-        "img": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800",
-        "en": {
-            "title": "Sector 6 Foundations: Structural Phase for 11,000 Homes",
-            "desc": "The Matunga railway land site enters its most critical engineering phase to date.",
-            "full": "Dharavi Redevelopment Project (DRP) engineers have successfully completed the massive piling and foundational work for the first cluster of buildings in Sector 6. This sector, situated on the 35-acre Railway land in Matunga, is the flagship starting point for the master plan. <br><br>The first phase consists of 11 residential blocks, each rising to 24 stories. By utilizing state-of-the-art pre-cast structural elements manufactured off-site, the project aims to reduce construction noise and pollution in the densely populated neighborhood. These units are designed as 350 sq. ft. carpet area homes, featuring high-speed elevators, secondary power backups, and specialized fire safety systems that exceed standard municipal requirements. DRPPL officials stated that the first 1,000 families are expected to receive their keys by mid-2027, marking the beginning of the world's most complex urban transformation."
-        },
-        "hi": {
-            "title": "सेक्टर 6 फाउंडेशन: 11,000 घरों के लिए संरचनात्मक चरण",
-            "desc": "माटुंगा रेलवे भूमि स्थल अपने सबसे महत्वपूर्ण इंजीनियरिंग चरण में प्रवेश कर गया है।",
-            "full": "धारावी पुनर्विकास परियोजना (DRP) के इंजीनियरों ने सेक्टर 6 में इमारतों के पहले क्लस्टर के लिए बड़े पैमाने पर पाइलिंग और बुनियादी काम सफलतापूर्वक पूरा कर लिया है। यह क्षेत्र, माटुंगा में 35 एकड़ रेलवे भूमि पर स्थित है। <br><br>पहले चरण में 11 आवासीय ब्लॉक शामिल हैं, जिनमें से प्रत्येक 24 मंजिला होगा। इस परियोजना का लक्ष्य निर्माण शोर और प्रदूषण को कम करना है। इन इकाइयों को 350 वर्ग फुट के कार्पेट एरिया वाले घरों के रूप में डिजाइन किया गया है, जिसमें हाई-स्पीड लिफ्ट और विशेष अग्नि सुरक्षा प्रणालियां शामिल हैं। अधिकारियों ने कहा कि पहले 1,000 परिवारों को 2027 के मध्य तक अपनी चाबियां मिलने की उम्मीद है।"
         }
     }
 ]
