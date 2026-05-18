@@ -1,5 +1,21 @@
 [
     {
+        "id": 16,
+        "source": "DRPPL/DailyLog",
+        "date": "May 18, 2026",
+        "img": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
+        "en": {
+            "title": "Project Status Report: May 18, 2026",
+            "desc": "Automated daily audit of Sector 6 construction progress and S1-S5 survey benchmarks.",
+            "full": "As of May 18, 2026 10:00 AM IST, DRPPL structural teams report consistent progress at the Matunga railway land site. Survey teams in Sector 1 have completed an additional 4 sub-blocks of biometric data collection. All systems are operational."
+        },
+        "hi": {
+            "title": "परियोजना स्थिति रिपोर्ट: May 18, 2026",
+            "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
+            "full": "May 18, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
+        }
+    },
+    {
         "id": 15,
         "source": "DRPPL/DailyLog",
         "date": "May 17, 2026",
@@ -141,22 +157,6 @@
             "title": "परियोजना स्थिति रिपोर्ट: May 09, 2026",
             "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
             "full": "May 09, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
-        }
-    },
-    {
-        "id": 6,
-        "source": "DRPPL/DailyLog",
-        "date": "May 08, 2026",
-        "img": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800",
-        "en": {
-            "title": "Project Status Report: May 08, 2026",
-            "desc": "Automated daily audit of Sector 6 construction progress and S1-S5 survey benchmarks.",
-            "full": "As of May 08, 2026 10:00 AM IST, DRPPL structural teams report consistent progress at the Matunga railway land site. Survey teams in Sector 1 have completed an additional 4 sub-blocks of biometric data collection. All systems are operational."
-        },
-        "hi": {
-            "title": "परियोजना स्थिति रिपोर्ट: May 08, 2026",
-            "desc": "सेक्टर 6 निर्माण प्रगति और S1-S5 सर्वेक्षण बेंचमार्क का स्वचालित दैनिक ऑडिट।",
-            "full": "May 08, 2026 सुबह 10:00 बजे IST तक, DRPPL संरचनात्मक टीमों ने माटुंगा रेलवे भूमि स्थल पर निरंतर प्रगति की सूचना दी है। सेक्टर 1 में सर्वेक्षण टीमों ने बायोमेट्रिक डेटा संग्रह के अतिरिक्त 4 उप-ब्लॉक पूरे कर लिए हैं।"
         }
     }
 ]
