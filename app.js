@@ -75,15 +75,79 @@ const fallbackNews = [
     }
 ];
 
+const dashboardData = {
+    stats: [
+        { label: "Households Mapped", val: "87,420", icon: "fa-house-chimney-window" },
+        { label: "Homes Under Construction", val: "11,000", icon: "fa-building" },
+        { label: "Sectors Active", val: "6/6", icon: "fa-map-location-dot" },
+        { label: "Youth Skilled", val: "5,200", icon: "fa-user-graduate" }
+    ],
+    roadmap: [
+        { title: "Biometric Survey Phase 1", status: "Completed", date: "Jan 2026", icon: "fa-fingerprint" },
+        { title: "Sector 6 Groundbreaking", status: "Completed", date: "Mar 2026", icon: "fa-hammer" },
+        { title: "Railway Land Piling Works", status: "In Progress", date: "May 2026", icon: "fa-trowel-bricks" },
+        { title: "Sample Flat Viewings", status: "Upcoming", date: "July 2026", icon: "fa-eye" }
+    ],
+    helpDesks: [
+        { 
+            name: "DRPPL Corporate Office", 
+            loc: "Gala Altezza, Udyog Nagar, Plot 17-A, Flank Rd, Sion (E)", 
+            landmark: "Beside Shanmukhananda Auditorium",
+            hours: "9:30 AM - 6:30 PM",
+            phone: "022-2401-2024",
+            mapUrl: "https://maps.app.goo.gl/kG1Y8hEa969wKzX67",
+            contact: "Main Project HQ"
+        },
+        { 
+            name: "Sector 1 & 2 Center", 
+            loc: "90 Feet Road, Near Kumbharwada", 
+            landmark: "Social Mission Building",
+            hours: "9 AM - 6 PM (Mon-Sat)",
+            phone: "1800-266-7001",
+            mapUrl: "https://www.google.com/maps/place/Kumbharwada,+Dharavi,+Mumbai",
+            contact: "Verification Officer: Mr. Sharma"
+        },
+        { 
+            name: "Central Help Desk", 
+            loc: "Sion-Bandra Link Road, Opposite ONGC", 
+            landmark: "Near Dharavi Depot",
+            hours: "24/7 Citizen Helpline",
+            phone: "022-2401-5000",
+            mapUrl: "https://www.google.com/maps/search/Sion-Bandra+Link+Road+Dharavi+Depot",
+            contact: "Public Relations Desk"
+        },
+        { 
+            name: "Sector 6 Site Office", 
+            loc: "Matunga Railway Land, Western Side", 
+            landmark: "Railway Colony Entry",
+            hours: "10 AM - 5 PM (Weekdays)",
+            phone: "022-2401-7000",
+            mapUrl: "https://www.google.com/maps/place/Matunga+Railway+Colony,+Matunga,+Mumbai",
+            contact: "Engineering Support Desk"
+        }
+    ],
+    mapSectors: [
+        { id: 1, d: "M50,150 C70,120 120,110 150,110 L160,220 C130,220 80,230 60,250 Z", name: "Sector 1", info: "Leather & Pottery Hub - Western Boundary" },
+        { id: 2, d: "M150,110 C180,105 220,100 260,105 L270,200 C230,205 190,215 160,220 Z", name: "Sector 2", info: "Residential Heart - North Central Dharavi" },
+        { id: 3, d: "M260,105 C290,100 330,95 360,95 L370,180 C330,190 300,195 270,200 Z", name: "Sector 3", info: "Sion Transit Corridor - North Eastern Gate" },
+        { id: 4, d: "M60,250 C90,240 140,230 160,220 L180,330 C150,340 100,350 80,370 Z", name: "Sector 4", info: "High-Density Residential - South West Area" },
+        { id: 5, d: "M160,220 C190,215 240,205 270,200 L290,310 C260,320 210,330 180,330 Z", name: "Sector 5", info: "Infrastructure Hub - South Eastern Boundary" },
+        { id: 6, d: "M320,30 L390,20 L400,80 L330,90 Z", name: "Sector 6", info: "Matunga Railway Land - Rehabilitation Site" }
+    ]
+};
+
 let newsData = [];
+let dashboardMetrics = null;
 let currentLang = 'en';
 let currentTheme = 'light';
 
 const translations = {
     en: {
-        btn: "हिन्दी", news: "Latest Updates", sectors: "Sectors Progress", guide: "Citizen Eligibility",
+        btn: "हिन्दी", news: "Latest Updates", dashboard: "Project Dashboard", sectors: "Sectors Progress", guide: "Citizen Eligibility",
         docsTitle: "Mandatory Document Checklist", verified: "VERIFIED SOURCE", readMore: "Read Full Report →",
         eligTitle: "Verified Eligibility Tiers",
+        mapTitle: "Interactive Sector Map", roadmapTitle: "Project Roadmap", helpdeskTitle: "Help Desk Locator",
+        statsLabels: { households: "Households Mapped", homes: "Homes Active", sectors: "Sectors Active", youth: "Youth Skilled" },
         eligContent: `
             <div style="margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 1rem;">
                 <h4 style="color: var(--primary);">Tier 1: Pre-2000 Families</h4>
@@ -101,9 +165,11 @@ const translations = {
         docs: ["Aadhaar Card", "Voter ID", "Ration Card", "Electricity Bill (Pre-cutoff)", "Property Tax Receipt", "Gumasta License", "School LC", "Bank Passbook"]
     },
     hi: {
-        btn: "English", news: "ताज़ा अपडेट", sectors: "सेक्टर की प्रगति", guide: "नागरिक पात्रता",
+        btn: "English", news: "ताज़ा अपडेट", dashboard: "प्रोजेक्ट डैशबोर्ड", sectors: "सेक्टर की प्रगति", guide: "नागरिक पात्रता",
         docsTitle: "अनिवार्य दस्तावेज़ सूची", verified: "सत्यापित स्रोत", readMore: "पूरी रिपोर्ट →",
         eligTitle: "सत्यापित पात्रता स्तर",
+        mapTitle: "इंटरएक्टिव सेक्टर मानचित्र", roadmapTitle: "परियोजना रोडमैप", helpdeskTitle: "हेल्प डेस्क लोकेटर",
+        statsLabels: { households: "मैप किए गए घर", homes: "सक्रिय घर", sectors: "सक्रिय सेक्टर", youth: "कुशल युवा" },
         eligContent: `
             <div style="margin-bottom: 1rem; border-left: 4px solid var(--primary); padding-left: 1rem;">
                 <h4 style="color: var(--primary);">स्तर 1: 2000 से पहले के परिवार</h4>
@@ -125,8 +191,109 @@ const translations = {
 async function init() {
     setupTabs();
     loadTheme();
-    await fetchNews();
+    await fetchData();
     renderContent();
+    renderDashboard();
+}
+
+function renderDashboard() {
+    const lang = translations[currentLang];
+    const stats = dashboardMetrics ? dashboardMetrics.stats : dashboardData.stats;
+    const roadmap = dashboardMetrics ? dashboardMetrics.roadmap : dashboardData.roadmap;
+    
+    // Render Stats
+    const statsContainer = document.getElementById('stats-container');
+    if(statsContainer) {
+        statsContainer.innerHTML = stats.map(s => `
+            <div class="stat-card">
+                <i class="fa-solid ${s.icon}" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+                <h2>${typeof s.val === 'number' ? s.val.toLocaleString() : s.val}</h2>
+                <p>${s.label}</p>
+            </div>
+        `).join('');
+    }
+
+    // Render Roadmap
+    const roadmapContainer = document.getElementById('roadmap-container');
+    if(roadmapContainer) {
+        roadmapContainer.innerHTML = roadmap.map(r => `
+            <div class="roadmap-item">
+                <div class="roadmap-icon"><i class="fa-solid ${r.icon}"></i></div>
+                <div>
+                    <h4 style="font-size: 0.95rem;">${r.title}</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-dim); font-weight: 700;">${r.status.toUpperCase()} | ${r.date}</p>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Render Help Desks
+    const helpdeskContainer = document.getElementById('helpdesk-container');
+    if(helpdeskContainer) {
+        helpdeskContainer.innerHTML = dashboardData.helpDesks.map(h => `
+            <div class="help-card" style="display: flex; flex-direction: column; gap: 0.5rem; position: relative;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <h4 style="margin: 0; color: var(--primary); font-size: 1rem;">${h.name}</h4>
+                    <span style="font-size: 0.6rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 50px; font-weight: 800;">OPEN</span>
+                </div>
+                <p style="font-weight: 700; font-size: 0.8rem; color: var(--text-main); margin: 0.25rem 0;"><i class="fa-solid fa-map-pin" style="color: #ef4444;"></i> ${h.landmark}</p>
+                <p><i class="fa-solid fa-location-dot" style="width: 15px;"></i> ${h.loc}</p>
+                <p><i class="fa-solid fa-clock" style="width: 15px;"></i> ${h.hours}</p>
+                <p><i class="fa-solid fa-phone" style="width: 15px;"></i> ${h.phone}</p>
+                <p style="font-size: 0.8rem; color: var(--text-dim); border-top: 1px solid var(--border); padding-top: 0.5rem;"><i class="fa-solid fa-id-card"></i> ${h.contact}</p>
+                <a href="${h.mapUrl}" target="_blank" style="text-decoration: none; background: var(--primary); color: white; padding: 0.75rem; border-radius: 12px; font-size: 0.85rem; font-weight: 700; text-align: center; margin-top: 0.5rem; display: block;">
+                    <i class="fa-solid fa-route"></i> Get Actual Directions
+                </a>
+            </div>
+        `).join('');
+    }
+
+    // Render Interactive Map
+    const svg = document.getElementById('dharavi-map');
+    if(svg) {
+        svg.innerHTML = dashboardData.mapSectors.map((s, idx) => `
+            <path class="sector-path" id="path-sector-${s.id}" d="${s.d}" 
+                  onclick="selectSector(${s.id})" 
+                  style="fill: ${idx === 5 ? 'rgba(16, 185, 129, 0.2)' : 'rgba(0,0,0,0.03)'}; 
+                         stroke: ${idx === 5 ? '#10b981' : 'var(--text-dim)'};
+                         stroke-width: 2;">
+            </path>
+        `).join('');
+    }
+}
+
+function selectSector(id) {
+    // Reset all paths
+    document.querySelectorAll('.sector-path').forEach(p => {
+        p.classList.remove('active-sector');
+        p.style.fill = p.id === 'path-sector-6' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(0,0,0,0.03)';
+    });
+    
+    // Highlight selected
+    const selected = document.getElementById(`path-sector-${id}`);
+    if(selected) {
+        selected.classList.add('active-sector');
+        selected.style.fill = 'var(--primary)';
+        selected.style.opacity = '0.7';
+    }
+
+    showSectorInfo(id);
+}
+
+function showSectorInfo(id) {
+    const sector = dashboardData.mapSectors.find(s => s.id === id);
+    const details = document.getElementById('sector-details');
+    const colors = ['#f59e0b', '#3b82f6', '#6366f1', '#a855f7', '#ec4899', '#10b981'];
+    
+    if(sector && details) {
+        details.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                <div style="width: 12px; height: 12px; border-radius: 50%; background: ${colors[id-1]};"></div>
+                <h4 style="color: var(--text-main); margin: 0; font-size: 1.1rem;">${sector.name}</h4>
+            </div>
+            <p style="color: var(--text-dim); line-height: 1.4;">${sector.info}</p>
+        `;
+    }
 }
 
 function loadTheme() {
@@ -148,12 +315,18 @@ function updateThemeIcon() {
     document.querySelector('#theme-btn i').className = currentTheme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
 }
 
-async function fetchNews() {
+async function fetchData() {
+    const timestamp = new Date().getTime();
     try {
-        const res = await fetch(`news.json?v=${new Date().getTime()}`);
-        newsData = await res.json();
-        if(!newsData || newsData.length === 0) throw new Error();
+        const [newsRes, dashRes] = await Promise.all([
+            fetch(`news.json?v=${timestamp}`),
+            fetch(`dashboard.json?v=${timestamp}`)
+        ]);
+        
+        if (newsRes.ok) newsData = await newsRes.json();
+        if (dashRes.ok) dashboardMetrics = await dashRes.json();
     } catch (e) {
+        console.error("Fetch Error:", e);
         newsData = fallbackNews;
     }
 }
@@ -168,6 +341,7 @@ function setupTabs() {
             const target = document.getElementById(btn.dataset.tab);
             if (target) target.classList.add('active');
             renderContent();
+            renderDashboard();
         };
     });
 }
@@ -175,6 +349,7 @@ function setupTabs() {
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'hi' : 'en';
     renderContent();
+    renderDashboard();
     document.getElementById('lang-btn').innerText = translations[currentLang].btn;
 }
 
@@ -182,8 +357,13 @@ function renderContent() {
     const lang = translations[currentLang];
     
     document.getElementById('tab-news').innerText = lang.news;
+    document.getElementById('tab-dashboard').innerText = lang.dashboard;
     document.getElementById('tab-sectors').innerText = lang.sectors;
     document.getElementById('tab-info').innerText = lang.guide;
+
+    document.getElementById('map-title').innerText = lang.mapTitle;
+    document.getElementById('roadmap-title').innerText = lang.roadmapTitle;
+    document.getElementById('helpdesk-title').innerText = lang.helpdeskTitle;
 
     const newsContainer = document.getElementById('news-container');
     if(newsContainer) {

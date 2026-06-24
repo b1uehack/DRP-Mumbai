@@ -76,5 +76,44 @@ def update_news():
     except Exception as e:
         print(f"System Error during news update: {e}")
 
+def update_dashboard():
+    try:
+        file_path = 'dashboard.json'
+        
+        # Initial data if not exists
+        default_data = {
+            "stats": [
+                { "label": "Households Mapped", "val": 87420, "icon": "fa-house-chimney-window" },
+                { "label": "Homes Under Construction", "val": 11000, "icon": "fa-building" },
+                { "label": "Sectors Active", "val": "6/6", "icon": "fa-map-location-dot" },
+                { "label": "Youth Skilled", "val": 5200, "icon": "fa-user-graduate" }
+            ],
+            "roadmap": [
+                { "title": "Biometric Survey Phase 1", "status": "Completed", "date": "Jan 2026", "icon": "fa-fingerprint" },
+                { "title": "Sector 6 Groundbreaking", "status": "Completed", "date": "Mar 2026", "icon": "fa-hammer" },
+                { "title": "Railway Land Piling Works", "status": "In Progress", "date": "May 2026", "icon": "fa-trowel-bricks" },
+                { "title": "Sample Flat Viewings", "status": "Upcoming", "date": "July 2026", "icon": "fa-eye" }
+            ]
+        }
+
+        if os.path.exists(file_path):
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        else:
+            data = default_data
+
+        # Simulate small daily progress for demo purposes
+        # In a real project, this would fetch from a database or internal API
+        data['stats'][0]['val'] += 15  # 15 new households mapped daily
+        data['stats'][3]['val'] += 4   # 4 new youth trained daily
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=4)
+        
+        print("Dashboard Metrics Updated.")
+    except Exception as e:
+        print(f"Error updating dashboard: {e}")
+
 if __name__ == "__main__":
     update_news()
+    update_dashboard()

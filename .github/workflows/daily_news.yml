@@ -1,9 +1,9 @@
 name: Daily News Update
 
 on:
-  schedule:
-    # 4:30 AM UTC is 10:00 AM IST
-    - cron: '30 4 * * *'
+#   schedule:
+#     # 4:30 AM UTC is 10:00 AM IST
+#     - cron: '30 4 * * *'
   workflow_dispatch: # Allows manual trigger
 
 jobs:

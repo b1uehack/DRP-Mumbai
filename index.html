@@ -29,6 +29,7 @@
         <!-- Navigation Tabs -->
         <nav class="tab-nav">
             <button class="tab-btn active" data-tab="news" id="tab-news">Latest News</button>
+            <button class="tab-btn" data-tab="dashboard" id="tab-dashboard">Project Dashboard</button>
             <button class="tab-btn" data-tab="sectors" id="tab-sectors">Sectors Status</button>
             <button class="tab-btn" data-tab="info" id="tab-info">Eligibility Guide</button>
         </nav>
@@ -38,6 +39,37 @@
             <!-- news Tab -->
             <section id="news" class="tab-panel active">
                 <div id="news-container"></div>
+            </section>
+
+            <!-- Dashboard Tab -->
+            <section id="dashboard" class="tab-panel">
+                <!-- Impact Stats -->
+                <div class="stats-grid" id="stats-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;"></div>
+
+                <div class="grid-2">
+                    <!-- Interactive Map -->
+                    <div class="sub-card">
+                        <h3 id="map-title" style="margin-bottom: 1.5rem;">Interactive Sector Map</h3>
+                        <div id="map-container" style="width: 100%; aspect-ratio: 1/1; position: relative; background: var(--bg-main); border-radius: 16px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+                            <svg id="dharavi-map" viewBox="0 0 400 400" style="width: 90%; height: 90%;"></svg>
+                        </div>
+                        <div id="sector-details" style="margin-top: 1.5rem; min-height: 80px; padding: 1rem; background: var(--bg-main); border-radius: 12px; font-size: 0.9rem;">
+                            <p style="color: var(--text-dim);">Hover over a sector to see details</p>
+                        </div>
+                    </div>
+
+                    <!-- Project Roadmap -->
+                    <div class="sub-card">
+                        <h3 id="roadmap-title" style="margin-bottom: 1.5rem;">Project Roadmap</h3>
+                        <div id="roadmap-container" style="display: flex; flex-direction: column; gap: 1.5rem;"></div>
+                    </div>
+                </div>
+
+                <!-- Help Desk Locator -->
+                <div class="sub-card" style="margin-top: 2rem;">
+                    <h3 id="helpdesk-title" style="margin-bottom: 1.5rem;">Help Desk Locator</h3>
+                    <div id="helpdesk-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;"></div>
+                </div>
             </section>
 
             <!-- Sectors Tab -->
